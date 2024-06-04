@@ -15,6 +15,19 @@ class SecondViewController: UIViewController, Coordinating {
 
         title = "Second"
         view.backgroundColor = .systemBlue
+        
+        
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 220, height: 55))
+        view.addSubview(button)
+        button.center = view.center
+        button.backgroundColor = .systemGreen
+        button.setTitle("Go Back!", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(didTapGoBack), for: .touchUpInside)
+    }
+    
+    @objc func didTapGoBack() {
+        coordinator?.eventOccured(with: .secondScreenButtonTapped)
     }
     
 }

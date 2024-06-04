@@ -10,6 +10,7 @@ import UIKit
 
 enum Event {
     case firstScreenButtonTapped
+    case secondScreenButtonTapped
 }
 
 protocol Coordinator {

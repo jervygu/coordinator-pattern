@@ -18,6 +18,9 @@ class MainCoordinator: Coordinator {
             var vc: UIViewController & Coordinating = SecondViewController()
             vc.coordinator = self
             navigationController?.pushViewController(vc, animated: true)
+            
+        case .secondScreenButtonTapped:
+            navigationController?.popViewController(animated: true)
         }
     }
     
